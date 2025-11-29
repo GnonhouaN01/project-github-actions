@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    @vite('resources/css/app.css')
-</head>
-<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+@extends("layout")
+
+@section("content")
 
 <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-lg">
     <h1 class="text-2xl font-bold mb-4 text-center">Connexion</h1>
@@ -21,7 +18,7 @@
             Se connecter
         </button>
     </form>
+    <a href="{{route('auth.register')}}">je n'est pas de compte <span class="d-flex justify-center text-blue-400">s'inscrire</span></a>
 </div>
 
-</body>
-</html>
+@endsection
