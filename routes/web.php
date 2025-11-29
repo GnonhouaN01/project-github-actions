@@ -6,7 +6,7 @@ use App\Http\Controllers\BookController;
 
 
 // Auth
-Route::get("/login", [AuthController::class, "showLoginForm"]);
+Route::get("/", [AuthController::class, "showLoginForm"]);
 Route::post("/login", [AuthController::class, "login"]);
 Route::get("/register", [AuthController::class, "showRegisterForm"]);
 Route::post("/register", [AuthController::class, "register"]);
