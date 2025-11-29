@@ -28,6 +28,12 @@ jobs:
           composer install --no-progress --prefer-dist
           npm install
 
+      - name: Copy .env exemple
+        run:  cp .env.exemple .env
+
+      - name: Generate APP_Key
+        run:  php artisan key:generate --force
+
       - name: Run migrations
         run:  php artisan migrate --env=testing --force
 
